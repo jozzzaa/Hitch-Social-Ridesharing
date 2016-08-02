@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'pg'
 require 'pry'
+require 'omniauth'
 # require 'bcrypt'
 
 require_relative 'db_config'
@@ -89,7 +90,7 @@ end
 # SIGNUP DRIVER ///////////////////
 
 get '/signup/driver' do
-  erb :user_signup_driver
+  erb :user_signup_drivers
 end
 
 post '/signup/driver' do
@@ -134,4 +135,8 @@ delete '/profile/edit' do
   user_delete = User.find_by(id: session[:user_id])
   user_delete.destroy
   erb :index
+end
+
+get '/ride/create' do
+  erb :ride_create
 end

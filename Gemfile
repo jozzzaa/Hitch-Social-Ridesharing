@@ -1,3 +1,11 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
+gem 'activerecord'
+gem 'sinatra'
+gem 'pg'
+gem 'bcrypt'
+gem 'httparty'
+gem 'pry'
+gem 'omniauth'
+gem 'omniauth-facebook'
