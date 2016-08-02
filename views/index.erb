@@ -1,0 +1,14 @@
+<% if logged_in? %>
+  <h1>Hi <%= current_user.first_name %></h1>
+  <form action="/login" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button>Logout</button>
+  </form>
+<% else %>
+  <form action="/login" method="get">
+    <button>Login</button>
+  </form>
+  <form action="/signup" method="get">
+    <button>Signup</button>
+  </form>
+<% end %>

@@ -1,0 +1,50 @@
+<form action="/profile/edit" method="post">
+
+  <input type="hidden" name="_method" value="put">
+
+  <label for="email">Enter your email</label>
+  <input type="text" name="email" value="<%= @user_edit['email'] %>" readonly>
+
+  <label for="password">Reset your Password</label>
+  <input type="password" name="password">
+
+  <label for="first_name">First name</label>
+  <input type="text" name="first_name" value="<%= @user_edit['first_name'] %>">
+
+  <label for="last_name">Last name</label>
+  <input type="text" name="last_name" value="<%= @user_edit['last_name'] %>">
+
+  <label for="dob">Date of Birth</label>
+  <input type="date" name="dob" value="<%= @user_edit['dob'] %>" readonly><br>
+
+  <label for="drivers_license">Drivers license</label>
+  <input type="text" name="drivers_license" value="<%= @user_edit['drivers_license'] %>" readonly>
+
+  <label for="location">Your Location / City</label>
+  <input type="text" name="location" value="<%= @user_edit['location'] %>">
+
+  <h3>Car Details</h3>
+
+  <label for="car_brand">Brand</label>
+  <input type="text" name="car_brand" value="<%= @user_edit['car_brand'] %>">
+
+  <label for="car_model">Model</label>
+  <input type="text" name="car_model" value="<%= @user_edit['car_model'] %>">
+
+  <label for="car_year">Year</label>
+  <input type="number" name="car_year" value="<%= @user_edit['car_year'] %>">
+
+  <label for="car_colour">Colour</label>
+  <input type="text" name="car_colour" value="<%= @user_edit['car_colour'] %>">
+
+  <label for="car_plate">Licence Plate</label>
+  <input type="text" name="car_plate" value="<%= @user_edit['car_plate'] %>">
+
+  <button>Save</button>
+
+</form>
+
+<form action="/profile/edit" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>delete</button>
+</form>
