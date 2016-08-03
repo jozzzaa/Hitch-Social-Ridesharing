@@ -37,11 +37,13 @@ create table rides(
 
   origin varchar(150),
   destination varchar(150),
-  when_date date,
-  when_time time,
+  when_date varchar(15),
+  when_time varchar(15),
   price_ask varchar(50),
   price_bid varchar(50),
 
   accepted boolean,
-  driver_id varchar(20)
+  driver_id varchar(20),
+
+  user_id varchar(10)
 );

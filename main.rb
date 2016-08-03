@@ -137,6 +137,26 @@ delete '/profile/edit' do
   erb :index
 end
 
+
+# HANDLE RIDES
+
 get '/ride/create' do
+
+  if !logged_in
+    erb :ride_create
+  end
+
+  erb :index
+end
+
+post '/ride/create' do
+  ride = Ride.new
+  ride.origin = params[:origin]
+  ride.destination = params[:destination]
+  ride.when_date = params[:when_date]
+  ride.when_time = params[:when_time]
+  ride.price_ask = params[:price]
+  ride.user_id = session[:user_id]
+  ride.save
   erb :ride_create
 end

@@ -3,12 +3,71 @@
 function initMap(element) {
 
   // Map Initialize
+
   var map = new google.maps.Map(document.getElementById(element), {
     center: {lat: -37.819806, lng: 144.9614263},
-    zoom: 14
+    zoom: 14,
+    mapTypeId: 'roadmap',
+    disableDefaultUI: true,
+    styles: [
+      {
+        "featureType": "landscape.natural",
+        "stylers": [
+          { "color": "#0e0f1a" }
+        ]
+      },{
+        "featureType": "road",
+        "stylers": [
+          { "color": "#161823" },
+          { "lightness": 2 }
+        ]
+      },{
+        "elementType": "labels.text.fill",
+        "stylers": [
+          { "color": "#6b6c72" }
+        ]
+      },{
+        "elementType": "labels.icon",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+      },{
+        "featureType": "water",
+        "stylers": [
+          { "color": "#161823" },
+          { "lightness": 11 }
+        ]
+      },{
+        "featureType": "landscape.man_made",
+        "stylers": [
+          { "color": "#0e0f1a" }
+        ]
+      },{
+        "featureType": "poi",
+        "stylers": [
+          { "color": "#0e0f1a" }
+        ]
+      },{
+        "featureType": "transit",
+        "stylers": [
+          { "color": "#161823" }
+        ]
+      },{
+        "elementType": "labels.text.stroke",
+        "stylers": [
+          { "color": "#0e0f1a" }
+        ]
+      }
+    ]
   });
 
-  var infoWindow = new google.maps.InfoWindow({map: map});
+  var infoWindow = "";
+
+  var iconBase = '/images/map_current_location.png';
+  var marker = new google.maps.Marker({
+    map: map,
+    icon: iconBase
+  });
 
  // Geolocation
   if (navigator.geolocation) {
@@ -18,8 +77,8 @@ function initMap(element) {
       lng: position.coords.longitude
     };
 
-    infoWindow.setPosition(pos);
-    infoWindow.setContent('Location found.');
+    marker.setPosition(pos);
+
     map.setCenter(pos);
   }, function() {
     handleLocationError(true, infoWindow, map.getCenter());

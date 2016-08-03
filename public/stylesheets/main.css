@@ -1,13 +1,112 @@
+/*LAYOUT STYLING*/
+
+* {
+  box-sizing: border-box;
+  font-family: 'Heebo', sans-serif;
+}
+
 body {
-  background-color: plum;
+  background-color: white;
+}
+
+#mobile_wrapper {
+  box-sizing: border-box;
+  height: 700px;
+  width: 400px;
+  background-color: #161823;
+  margin: 0 auto;
+  margin-top: 75px;
+}
+
+.navigation {
+  height: 8%;
+  width: 100%;
+  background-color: #161823;
+  padding-top: 11px;
+  padding-left: 15px;
+}
+
+.navigation > button {
+  width: 35px;
+  height: 35px;
+  background-color: #1d1f29;
+  border-radius: 50px;
+  border: 0.5px solid #393a42;
+  padding-top: 7px;
+}
+
+.navigation > button:hover {
+  background-color: #2d2f3d;
+}
+
+.navigation > button > img {
+  height: 15px;
+}
+
+/*GLOBAL STYLES*/
+
+h1 {
+  color: white;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 42px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*CREATE RIDE*/
+
+.panel-ride {
+  height: 62%;
+  width: 100%;
+  background-color: #0e0f1a;
+  padding: 25px;
+}
+
+.input-holder {
+  width: 100%;
+  height: 47px;
+  background: #6956EC;
+  background: -webkit-linear-gradient(left, #6956EC, #56B2BA);
+  background: -o-linear-gradient(left, #6956EC, #56B2BA);
+  background: -moz-linear-gradient(left, #6956EC, #56B2BA);
+  background: linear-gradient(left, #6956EC, #56B2BA);
+  padding: 0px;
+
+}
+
+.ride-input {
+  float: left;
+  width: 100%;
+  height: 45px;
+  background-color: #161823;
+  border: 0px;
+  color: white;
+  padding: 25px 20px 20px 20px;
+  font-size: 0.6em;
+}
+
+.input-holder > img {
+  width: 20px;
+  float: left;
+
+}
+
+.panel-ride > form > button {
+  width: 100%;
+  height: 45px;
+  background-color: #0b78e3;
+  margin-top: 25px;
+  border-top: 1px solid #3391ed;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  color: white;
+  border-radius: 3px;
 }
 
 #map {
-  height: 300px;
-  width: 300px;
-}
-
-#map_create {
-  height: 300px;
-  width: 300px;
+  height: 30%;
+  width: 100%;
+  background-color: red;
 }
