@@ -1,50 +1,93 @@
-<form action="/profile/edit" method="post">
+<div class="navigation">
 
-  <input type="hidden" name="_method" value="put">
+  <button class="nav-btns" id="back-button-nav">
+    <img src="/images/back-icon.png" alt="">
+  </button>
 
-  <label for="email">Enter your email</label>
-  <input type="text" name="email" value="<%= @user_edit['email'] %>" readonly>
+</div>
 
-  <label for="password">Reset your Password</label>
-  <input type="password" name="password">
+<div class="page_holder">
 
-  <label for="first_name">First name</label>
-  <input type="text" name="first_name" value="<%= @user_edit['first_name'] %>">
+  <h3>Edit</h3>
+  <h1>Your Details</h1>
 
-  <label for="last_name">Last name</label>
-  <input type="text" name="last_name" value="<%= @user_edit['last_name'] %>">
+  <form action="/profile/edit" method="post">
 
-  <label for="dob">Date of Birth</label>
-  <input type="date" name="dob" value="<%= @user_edit['dob'] %>" readonly><br>
+    <input type="hidden" name="_method" value="put">
 
-  <label for="drivers_license">Drivers license</label>
-  <input type="text" name="drivers_license" value="<%= @user_edit['drivers_license'] %>" readonly>
+    <h3>General</h3>
 
-  <label for="location">Your Location / City</label>
-  <input type="text" name="location" value="<%= @user_edit['location'] %>">
+    <label for="email">Enter your email</label>
+    <div class="input-holder">
+      <input type="text" name="email" value="<%= @user_edit['email'] %>" readonly>
+    </div>
 
-  <h3>Car Details</h3>
+    <label for="password">New Password</label>
+    <div class="input-holder">
+      <input type="password" name="password">
+    </div>
 
-  <label for="car_brand">Brand</label>
-  <input type="text" name="car_brand" value="<%= @user_edit['car_brand'] %>">
+    <label for="first_name">First name</label>
+    <div class="input-holder">
+      <input type="text" name="first_name" value="<%= @user_edit['first_name'] %>">
+    </div>
 
-  <label for="car_model">Model</label>
-  <input type="text" name="car_model" value="<%= @user_edit['car_model'] %>">
+    <label for="last_name">Last name</label>
+    <div class="input-holder">
+      <input type="text" name="last_name" value="<%= @user_edit['last_name'] %>">
+    </div>
 
-  <label for="car_year">Year</label>
-  <input type="number" name="car_year" value="<%= @user_edit['car_year'] %>">
+    <label for="dob">Date of Birth</label>
+    <div class="input-holder">
+      <input type="date" name="dob" value="<%= @user_edit['dob'] %>" readonly><br>
+    </div>
 
-  <label for="car_colour">Colour</label>
-  <input type="text" name="car_colour" value="<%= @user_edit['car_colour'] %>">
+    <label for="drivers_license">Drivers license</label>
+    <div class="input-holder">
+      <input type="text" name="drivers_license" value="<%= @user_edit['drivers_license'] %>" readonly>
+    </div>
 
-  <label for="car_plate">Licence Plate</label>
-  <input type="text" name="car_plate" value="<%= @user_edit['car_plate'] %>">
+    <label for="location">Your Location / City</label>
+    <div class="input-holder">
+      <input type="text" name="location" value="<%= @user_edit['location'] %>">
+    </div>
 
-  <button>Save</button>
+    <h3>Car Details</h3>
 
-</form>
+    <label for="car_brand">Brand</label>
+    <div class="input-holder">
+      <input type="text" name="car_brand" value="<%= @user_edit['car_brand'] %>">
+    </div>
 
-<form action="/profile/edit" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <button>delete</button>
-</form>
+    <label for="car_model">Model</label>
+    <div class="input-holder">
+      <input type="text" name="car_model" value="<%= @user_edit['car_model'] %>">
+    </div>
+
+    <label for="car_year">Year</label>
+    <div class="input-holder">
+      <input type="number" name="car_year" value="<%= @user_edit['car_year'] %>">
+    </div>
+
+    <label for="car_colour">Colour</label>
+    <div class="input-holder">
+      <input type="text" name="car_colour" value="<%= @user_edit['car_colour'] %>">
+    </div>
+
+    <label for="car_plate">Licence Plate</label>
+    <div class="input-holder">
+      <input type="text" name="car_plate" value="<%= @user_edit['car_plate'] %>">
+    </div>
+
+    <button class="form-button" id="blue-button">Save</button>
+
+  </form>
+
+  <form action="/profile/edit" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button class="form-button" id="red-button">Delete</button>
+  </form>
+
+</div>
+
+<script src="/javascripts/nav-buttons.js"></script>

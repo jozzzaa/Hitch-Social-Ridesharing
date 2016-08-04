@@ -1,19 +1,26 @@
 <div class="navigation">
 
-  <button class="back-btn" id="back-button-nav">
+  <button class="nav-btns" id="back-button-nav">
     <img src="/images/back-icon.png" alt="">
   </button>
+
+  <form action="/login" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button class="nav-btns" id="logout_button">
+      <img src="/images/icons/logout.png" alt="">
+    </button>
+  </form>
 
 </div>
 
 <div class="page_holder">
 
   <h3>Profile</h3>
-  <h1><%= @user_profile['first_name'] + ' ' + @user_profile['last_name'] %></h1>
+  <h1><%= @user_profile['first_name'] %> <%= @user_profile['last_name'] %></h1>
 
   <div class="item_holder" id="profile_general">
     <p>General</p>
-    <a href="">
+    <a href="/profile/edit">
       <img src="/images/icons/settings.png" alt="" class="edit_button">
     </a>
     <div class="item_panel">
@@ -25,7 +32,7 @@
 
   <div class="item_holder" id="profile_driver">
     <p>Driver</p>
-    <a href="">
+    <a href="/profile/edit">
       <img src="/images/icons/settings.png" alt="" class="edit_button">
     </a>
     <div class="item_panel">
@@ -52,4 +59,4 @@
   </div>
 </div>
 
-<script src="/javascripts/back-button.js"></script>
+<script src="/javascripts/nav-buttons.js"></script>

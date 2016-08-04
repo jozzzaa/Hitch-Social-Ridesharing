@@ -53,7 +53,7 @@ end
 
 delete '/login' do
   session[:user_id] = nil
-  redirect to '/login'
+  redirect to '/'
 end
 
 # SIGNUP ///////////////////
@@ -134,13 +134,13 @@ put '/profile/edit' do
   user_update.car_colour = params[:car_colour]
   user_update.car_plate = params[:car_plate]
   user_update.save
-  erb :index
+  redirect to '/profile'
 end
 
 delete '/profile/edit' do
   user_delete = User.find_by(id: session[:user_id])
   user_delete.destroy
-  erb :index
+  redirect to '/'
 end
 
 
@@ -169,5 +169,5 @@ end
 
 get '/driver_dashboard' do
   @user_profile = User.find_by(id: session[:user_id])
-  erb :driver_dashboard
+  erb :user_driver_dashboard
 end
