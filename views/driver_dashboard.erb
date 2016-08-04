@@ -8,26 +8,11 @@
 
 <div class="page_holder">
 
-  <h3>Profile</h3>
-  <h1><%= @user_profile['first_name'] + ' ' + @user_profile['last_name'] %></h1>
-
-  <div class="item_holder" id="profile_general">
-    <p>General</p>
-    <a href="">
-      <img src="/images/icons/settings.png" alt="" class="edit_button">
-    </a>
-    <div class="item_panel">
-      <p><span class="label">Email: </span><%= @user_profile['email'] %></p>
-      <p><span class="label">Location: </span><%= @user_profile['location'] %></p>
-      <p><span class="label">Drivers License: </span><%= @user_profile['drivers_license'] %></p>
-    </div>
-  </div>
+  <h3>View your Stats</h3>
+  <h1>Driver Dashboard</h1>
 
   <div class="item_holder" id="profile_driver">
     <p>Driver</p>
-    <a href="">
-      <img src="/images/icons/settings.png" alt="" class="edit_button">
-    </a>
     <div class="item_panel">
       <div class="driver_circles">
         <p><span class="label">Rating: </span><br><%= @user_profile['review_outof_five'] %></p>

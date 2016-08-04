@@ -1,14 +1,79 @@
 <% if logged_in? %>
-  <h1>Hi <%= current_user.first_name %></h1>
-  <form action="/login" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <button>Logout</button>
-  </form>
-<% else %>
+
+  <div class="ride_list">
+
+    <a href="/profile">
+      <div id="profile-icon">
+        <img src="/images/icons/profile.png" alt="">
+      </div>
+    </a>
+
+    <div class="welcome_user">
+      <h1>Hi <%= current_user.first_name %>,</h1>
+      <div id="button_center">
+        <form action="/ride/create" method="get">
+          <button class="index-btn" id="pink-btn">Hitch a Ride</button>
+        </form>
+        <form action="/driver_dashboard" method="get">
+          <button class="index-btn">Driver Dashboard</button>
+        </form>
+      </div>
+    </div>
+
+    <% @rides.each do |ride| %>
+      <div class="ride_holder">
+        <a href="" id="list-link">
+          <p>
+            <% user_name = User.find_by(id: ride.creator_id)%>
+            <%= user_name.first_name %> needs to hitch a ride
+          </p>
+          <div class="ride_info">
+            <div class="origin_holder">
+              <p>from</p>
+              <p><span id="origin_span">
+                <% origin_arr = ride['origin'].split(//) %>
+                <% origin_short = origin_arr.shift(3) %>
+                <%= origin_short.join('').upcase %>
+              </span></p>
+              <p><%= ride['origin'] %></p>
+            </div>
+            <div class="transfer_icon_holder">
+              <img src="/images/icons/travel-arrow.png" alt="">
+            </div>
+            <div class="destination_holder">
+              <p>to</p>
+              <p><span id="destination_span">
+                <% destination_arr = ride['destination'].split(//) %>
+                <% destination_short = destination_arr.shift(3) %>
+                <%= destination_short.join('').upcase %>
+              </span></p>
+              <p><%= ride['destination'] %></p>
+            </div>
+            <div class="remaining_info">
+              <p><span class="extra_info_bold">Date: </span> <%= ride['when_date'] %></p>
+              <p><span class="extra_info_bold">Time: </span> <%= ride['when_time'] %></p>
+              <p><span class="extra_info_bold">Offer: </span> $<%= ride['price_ask'] %></p>
+            </div>
+          </div>
+          <div id="map-comingsoon">
+
+          </div>
+        </a>
+      </div>
+    <% end %>
+  </div>
+
+
+<% end %>
+
+<% if !logged_in? %>
+
   <form action="/login" method="get">
     <button>Login</button>
   </form>
+
   <form action="/signup" method="get">
     <button>Signup</button>
   </form>
+
 <% end %>

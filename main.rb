@@ -31,6 +31,7 @@ helpers do
 end
 
 get '/' do
+  @rides = Ride.all
   erb :index
 end
 
@@ -83,7 +84,7 @@ post '/signup/profile' do
   if params[:driver] == "true"
     erb :user_signup_driver
   else
-    erb :index
+    redirect to '/'
   end
 end
 
@@ -103,14 +104,19 @@ post '/signup/driver' do
   user_driver.car_colour = params[:car_colour]
   user_driver.car_plate = params[:car_plate]
   user_driver.save
-  erb :index
+  redirect to '/'
 end
 
-# EDIT USER ///////////////////
+# VIEW / EDIT USER ///////////////////
+
+get '/profile' do
+  @user_profile = User.find_by(id: session[:user_id])
+  erb :user_profile
+end
 
 get '/profile/edit' do
   @user_edit = User.find_by(id: session[:user_id])
-  erb :user_profile
+  erb :user_profile_edit
 end
 
 put '/profile/edit' do
@@ -141,12 +147,10 @@ end
 # HANDLE RIDES
 
 get '/ride/create' do
-
-  if !logged_in
-    erb :ride_create
+  if !logged_in?
+    redirect to '/'
   end
-
-  erb :index
+  erb :ride_create
 end
 
 post '/ride/create' do
@@ -156,7 +160,14 @@ post '/ride/create' do
   ride.when_date = params[:when_date]
   ride.when_time = params[:when_time]
   ride.price_ask = params[:price]
-  ride.user_id = session[:user_id]
+  ride.creator_id = session[:user_id]
   ride.save
-  erb :ride_create
+  redirect to '/'
+end
+
+# DRIVER DASHBOARD
+
+get '/driver_dashboard' do
+  @user_profile = User.find_by(id: session[:user_id])
+  erb :driver_dashboard
 end

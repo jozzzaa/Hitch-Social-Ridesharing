@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <title>Hello World</title>
   <link rel='stylesheet' href='/stylesheets/main.css'>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL_J1ih8u1e5_TN8uG30lkWDTzwg4c5XU
-"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GOOGLEAPI']%>"></script>
 <link href='https://fonts.googleapis.com/css?family=Heebo:400,100,300,500,700,800,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -14,6 +13,4 @@
         <%= yield %>
     </div>
 
-  <script src="/javascripts/maps.js"></script>
-  <script src="/javascripts/application.js"></script>
 </body>
