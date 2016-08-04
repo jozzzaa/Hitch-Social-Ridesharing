@@ -165,6 +165,12 @@ post '/ride/create' do
   redirect to '/'
 end
 
+get '/ride/:id' do
+  @ride = Ride.find_by(id: params[:id])
+  @ride_requester = User.find_by(id: @ride['creator_id'])
+  erb :ride_view
+end
+
 # DRIVER DASHBOARD
 
 get '/driver_dashboard' do

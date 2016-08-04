@@ -22,7 +22,7 @@
 
     <% @rides.each do |ride| %>
       <div class="ride_holder">
-        <a href="" id="list-link">
+        <a href="/ride/<%= ride['id'] %>" id="list-link">
           <p>
             <% user_name = User.find_by(id: ride.creator_id)%>
             <%= user_name.first_name %> needs to hitch a ride
