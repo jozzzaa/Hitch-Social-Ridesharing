@@ -1,18 +1,41 @@
-<form action="/signup/profile" method="post">
+<div class="navigation">
 
-  <label for="first_name">Enter your first name</label>
-  <input type="text" name="first_name">
+  <button class="nav-btns" id="back-button-nav">
+    <img src="/images/back-icon.png" alt="">
+  </button>
 
-  <label for="last_name">Enter your last name</label>
-  <input type="text" name="last_name">
+</div>
 
-  <label for="dob">Enter your date of birth</label>
-  <input type="date" name="dob"><br>
+<div class="page_holder">
 
-  <label for="driver">Would you like to be able to drive your friends?</label>
-  <input type="radio" name="driver" value="true">Yes, please<br>
-  <input type="radio" name="driver" value="false">No, thanks<br>
+  <h3>Profile</h3>
+  <h1>Who are you?</h1>
 
-  <button>Save</button>
+  <form action="/signup/profile" method="post">
 
-</form>
+    <label for="first_name">First name</label>
+    <div class="input-holder">
+      <input type="text" name="first_name">
+    </div>
+
+    <label for="last_name">Last name</label>
+    <div class="input-holder">
+      <input type="text" name="last_name">
+    </div>
+
+    <label for="dob">Date of birth</label>
+    <div class="input-holder">
+      <input type="date" name="dob"><br>
+    </div>
+
+    <label for="driver">Would you like to be able to drive your friends?</label>
+      <input type="radio" name="driver" value="true" class="signup_radio"><span class="driver_radio">Yes</span>
+      <input type="radio" name="driver" value="false" class="signup_radio"><span class="driver_radio">No</span>
+
+      <button class="form-button" id="blue-button">Save</button>
+
+  </form>
+
+</div>
+
+<script src="/javascripts/nav-buttons.js"></script>

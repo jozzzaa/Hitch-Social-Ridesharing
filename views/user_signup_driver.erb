@@ -1,28 +1,59 @@
-<form action="/signup/driver" method="post">
+<div class="navigation">
 
-  <label for="drivers_license">Enter your drivers license</label>
-  <input type="text" name="drivers_license">
+  <button class="nav-btns" id="back-button-nav">
+    <img src="/images/back-icon.png" alt="">
+  </button>
 
-  <label for="location">Enter your city</label>
-  <input type="text" name="location">
+</div>
 
-  <h3>Car Details</h3>
+<div class="page_holder">
 
-  <label for="car_brand">Brand</label>
-  <input type="text" name="car_brand">
+  <h3>Become a</h3>
+  <h1>Hitch Driver</h1>
 
-  <label for="car_model">Model</label>
-  <input type="text" name="car_model">
+  <form action="/signup/driver" method="post">
 
-  <label for="car_year">Year</label>
-  <input type="number" name="car_year">
+    <label for="drivers_license">Drivers License</label>
+    <div class="input-holder">
+      <input type="text" name="drivers_license">
+    </div>
 
-  <label for="car_colour">Colour</label>
-  <input type="text" name="car_colour">
+    <label for="location">Your City</label>
+    <div class="input-holder">
+      <input type="text" name="location">
+    </div>
 
-  <label for="car_plate">Licence Plate</label>
-  <input type="text" name="car_plate">
+    <h3>Car Details</h3>
 
-  <button>Become a driver. Instantly!</button>
+    <label for="car_brand">Brand</label>
+    <div class="input-holder">
+      <input type="text" name="car_brand">
+    </div>
 
-</form>
+    <label for="car_model">Model</label>
+    <div class="input-holder">
+      <input type="text" name="car_model">
+    </div>
+
+    <label for="car_year">Year</label>
+    <div class="input-holder">
+      <input type="number" name="car_year">
+    </div>
+
+    <label for="car_colour">Colour</label>
+    <div class="input-holder">
+      <input type="text" name="car_colour">
+    </div>
+
+    <label for="car_plate">Licence Plate</label>
+    <div class="input-holder">
+      <input type="text" name="car_plate">
+    </div>
+
+    <button class="form-button" id="blue-button">Become a driver. Instantly!</button>
+
+  </form>
+
+</div>
+
+<script src="/javascripts/nav-buttons.js"></script>

@@ -1,15 +1,32 @@
-<form action="/signup" method="post">
+<div class="navigation">
 
-  <label for="email">Enter your email</label>
-  <input type="text" name="email">
+  <button class="nav-btns" id="back-button-nav">
+    <img src="/images/back-icon.png" alt="">
+  </button>
 
-  <label for="password">Create a password</label>
-  <input type="password" name="password">
+</div>
 
-  <button>Sign Up</button>
+<div class="page_holder">
 
-</form>
+  <h3>Join</h3>
+  <h1>Sign Up</h1>
 
-<hr>
+  <form action="/signup" method="post">
 
-<p>Facebook Sign Up</p>
+    <label for="email">Enter your email</label>
+    <div class="input-holder">
+      <input type="text" name="email">
+    </div>
+
+    <label for="password">Create a password</label>
+    <div class="input-holder">
+      <input type="password" name="password">
+    </div>
+
+    <button class="form-button" id="blue-button">Sign Up</button>
+
+  </form>
+
+</div>
+
+<script src="/javascripts/nav-buttons.js"></script>

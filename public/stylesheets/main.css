@@ -18,6 +18,114 @@ body {
   margin-top: 75px;
 }
 
+#background-video {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+video#bgvid {
+  height: 100%;
+  z-index: -100;
+  position: relative;
+  z-index: 0;
+  -ms-transform: translateX(-35%);
+  -webkit-transform: translateX(-35%);
+  transform: translateX(-35%);
+}
+
+#overlay {
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+top: 0px;
+left: 0px;
+z-index: 1;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.3);
+height: 100%;
+width: 100%;
+}
+
+#login_welcome {
+  z-index: 2;
+  width: 325px;
+  text-align: center;
+}
+
+#login_welcome > div {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px 25px 25px 25px;
+
+}
+
+#login_welcome > form > input {
+  width: 100%;
+}
+
+#icon {
+  width: 100px;
+  margin: 20px 0px 20px 0px;
+}
+
+.login-input-holder {
+  height: 47px;
+  display: inline-block;
+  width: 100%;
+  background: #6956EC;
+  background: -webkit-linear-gradient(left, #6956EC, #56B2BA);
+  background: -o-linear-gradient(left, #6956EC, #56B2BA);
+  background: -moz-linear-gradient(left, #6956EC, #56B2BA);
+  background: linear-gradient(left, #6956EC, #56B2BA);
+  padding: 0px;
+  margin-top: 10px;
+}
+
+.login-input-holder > input {
+  width: 100%;
+  height: 45px;
+  background-color: #dadada;
+  border: 0px;
+  color: black;
+  padding: 25px 20px 20px 20px;
+  font-size: 0.6em;
+}
+
+#signin_btn {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  border: 0px;
+  color: #8D4DE8;
+  border-radius: 3px;
+  background-color: white;
+  /*background: -webkit-linear-gradient(left top, #8D4DE8, #FF2366);
+  background: -o-linear-gradient(bottom right, #8D4DE8, #FF2366);
+  background: -moz-linear-gradient(bottom right, #8D4DE8, #FF2366);
+  background: linear-gradient(bottom right, #8D4DE8, #FF2366);*/
+  margin-top: 10px;
+}
+
+#welcome_extra {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+#welcome_extra > form > button {
+  float: left;
+  width: 50%;
+  height: 50px;
+  font-size: 0.7em;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid white;
+}
+
+
 .navigation {
   height: 8%;
   width: 100%;
@@ -180,6 +288,7 @@ p {
   background-color: #0b78e3;
   border-top: 1px solid #3391ed;
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 #red-button {
@@ -468,4 +577,22 @@ p {
   height: 30%;
   width: 100%;
   background-color: red;
+}
+
+/*SIGNUP*/
+
+
+
+.signup_radio {
+  width: 20px;
+  height: 20px;
+  border: 5px solid white;
+  color: #161823;
+  margin-bottom: 5px;
+
+}
+
+.driver_radio {
+  color: white;
+  padding: 0px 25px 0px 10px;
 }

@@ -41,6 +41,7 @@ create table rides(
   when_time varchar(70),
   price_ask varchar(50),
   price_bid varchar(50),
+  passengers varchar(10),
 
   accepted boolean,
   driver_id varchar(20)
