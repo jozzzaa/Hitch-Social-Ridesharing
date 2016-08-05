@@ -33,7 +33,7 @@ create table users(
 
 create table rides(
   id serial4 primary key,
-  user_id varchar(20) not null,
+  creator_id varchar(20) not null,
 
   origin varchar(150),
   destination varchar(150),

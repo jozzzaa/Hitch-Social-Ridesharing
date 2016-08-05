@@ -63,41 +63,40 @@
     <% end %>
   </div>
 
-
 <% end %>
 
 <% if !logged_in? %>
 
-<div id="background-video">
+  <div id="background-video">
 
-  <video playsinline autoplay muted loop id="bgvid">
-    <source src="/video/sky_diving_car.mp4" type="video/mp4">
-  </video>
+    <video playsinline autoplay muted loop id="bgvid">
+      <source src="/video/sky_diving_car.mp4" type="video/mp4">
+    </video>
 
-  <div id="overlay">
-    <div id="login_welcome">
-      <img src="/images/logo.png" alt="" id="icon">
-      <div id="underlay">
-        <form action="/login" method="post">
-          <div class="login-input-holder">
-            <input type="email" name="email" placeholder="Enter your email">
-          </div>
-          <div class="login-input-holder">
-            <input type="password" name="password" placeholder="Enter password">
-          </div>
-          <button id="signin_btn">Login</button>
+    <div id="overlay">
+      <div id="login_welcome">
+        <img src="/images/logo.png" alt="" id="icon">
+        <div id="underlay">
+          <form action="/login" method="post">
+            <div class="login-input-holder">
+              <input type="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="login-input-holder">
+              <input type="password" name="password" placeholder="Enter password">
+            </div>
+            <button id="signin_btn">Login</button>
+          </form>
+        </div>
+      </div>
+      <div id="welcome_extra">
+        <form action="" method="get">
+          <button>Facebook Login</button>
+        </form>
+        <form action="/signup" method="get">
+          <button>Signup</button>
         </form>
       </div>
     </div>
-    <div id="welcome_extra">
-      <form action="" method="get">
-        <button>Facebook Login</button>
-      </form>
-      <form action="/signup" method="get">
-        <button>Signup</button>
-      </form>
-    </div>
   </div>
-</div>
 
 <% end %>

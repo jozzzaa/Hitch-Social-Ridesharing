@@ -1,0 +1,662 @@
+/* LAYOUT STYLING */
+
+* {
+  box-sizing  : border-box;
+  font-family : 'Heebo',
+                sans-serif;
+}
+
+body {
+  background-color : white;
+}
+
+#mobile_wrapper {
+  box-sizing       : border-box;
+  width            : 400px;
+  height           : 700px;
+  margin           : 0 auto;
+  margin-top       : 75px;
+  background-color : #0e0f1a;
+}
+
+#background-video {
+  position : relative;
+  width    : 100%;
+  height   : 100%;
+  overflow : hidden;
+}
+
+video#bgvid {
+  z-index           : -100;
+  z-index           : 0;
+  position          : relative;
+  height            : 100%;
+  -ms-transform     : translateX(-35%);
+  -webkit-transform : translateX(-35%);
+  transform         : translateX(-35%);
+}
+
+#overlay {
+  z-index          : 1;
+  display          : flex;
+  position         : absolute;
+  top              : 0px;
+  left             : 0px;
+  width            : 100%;
+  width            : 100%;
+  height           : 100%;
+  background-color : rgba(0, 0, 0, 0.3);
+  align-items      : center;
+  justify-content  : center;
+}
+
+#login_welcome {
+  z-index    : 2;
+  width      : 325px;
+  text-align : center;
+}
+
+#login_welcome > div {
+  padding          : 15px 25px 25px 25px;
+  background-color : rgba(0, 0, 0, 0.2);
+}
+
+#login_welcome > form > input {
+  width : 100%;
+}
+
+#icon {
+  width  : 100px;
+  margin : 20px 0px 20px 0px;
+}
+
+.login-input-holder {
+  display    : inline-block;
+  width      : 100%;
+  height     : 47px;
+  margin-top : 10px;
+  padding    : 0px;
+  background : #6956EC;
+  background : -moz-linear-gradient(left, #6956EC, #56B2BA);
+  background : -o-linear-gradient(left, #6956EC, #56B2BA);
+  background : -webkit-linear-gradient(left, #6956EC, #56B2BA);
+  background : linear-gradient(left, #6956EC, #56B2BA);
+}
+
+.login-input-holder > input {
+  width            : 100%;
+  height           : 45px;
+  padding          : 25px 20px 20px 20px;
+  color            : black;
+  border           : 0px;
+  background-color : #dadada;
+  font-size        : 0.6em;
+}
+
+#signin_btn {
+  width            : 100%;
+  height           : 40px;
+  margin-top       : 10px;
+  margin-top       : 10px;
+  color            : #8D4DE8;
+  border           : 0px;
+  border-radius    : 3px;
+  background-color : white;
+}
+
+#welcome_extra {
+  position : absolute;
+  bottom   : 0px;
+  left     : 0px;
+  width    : 100%;
+}
+
+#welcome_extra > form > button {
+  width            : 50%;
+  height           : 50px;
+  float            : left;
+  color            : white;
+  border           : 1px solid white;
+  background-color : rgba(255, 255, 255, 0.2);
+  font-size        : 0.7em;
+}
+
+.navigation {
+  width            : 100%;
+  height           : 8%;
+  padding-top      : 11px;
+  padding-left     : 15px;
+  background-color : #161823;
+}
+
+.nav-btns {
+  width            : 35px;
+  height           : 35px;
+  padding-top      : 7px;
+  border           : 0.5px solid #393a42;
+  border-radius    : 50px;
+  background-color : #1d1f29;
+}
+
+.navigation > form {
+  float        : right;
+  margin-right : 15px;
+}
+
+.nav-btns:hover {
+  background-color : #2d2f3d;
+}
+
+.nav-btns > img {
+  height : 15px;
+}
+
+.item_holder > p {
+  display : inline-block;
+}
+
+.edit_button {
+  display : inline-block;
+  width   : 15px;
+  float   : right;
+  margin  : 13px 10px 0px 0px;
+  opacity : 0.3;
+}
+
+/* GLOBAL STYLES */
+
+a[href^="http://maps.google.com/maps"] {
+  display : none !important;
+}
+
+a[href^="https://maps.google.com/maps"] {
+  display : none !important;
+}
+
+.gm-style-cc,
+.gmnoprint a,
+.gmnoprint span {
+  display : none;
+}
+
+.gmnoprint div {
+  background : none !important;
+}
+
+h1 {
+  margin-top    : 10px;
+  margin-bottom : 20px;
+  color         : white;
+  text-align    : center;
+  font-size     : 40px;
+  font-weight   : 300;
+  line-height   : 42px;
+}
+
+.page_holder > h1 {
+  margin-bottom : 40px;
+}
+
+.page_holder > h3 {
+  margin-top    : 30px;
+  margin-bottom : 0px;
+  color         : #afafb3;
+  text-align    : center;
+  font-size     : 1.2em;
+  font-weight   : 300;
+}
+
+.page_holder > div > h3 {
+  margin-top    : 30px;
+  margin-bottom : 0px;
+  color         : #afafb3;
+  text-align    : center;
+  font-size     : 1.2em;
+  font-weight   : 300;
+}
+
+p {
+  color : white;
+}
+
+.page_holder {
+  position : relative;
+  height   : 92%;
+  padding  : 0px 10px 0px 10px;
+  overflow : scroll;
+}
+
+.item_holder {
+  box-sizing       : border-box;
+  margin-top       : 10px;
+  margin-bottom    : 10px;
+  color            : white;
+  overflow         : auto;
+  border-radius    : 5px;
+  background-color : #1c1e2b;
+}
+
+.item_holder > p {
+  margin-bottom  : 8px;
+  padding-top    : 0px;
+  padding-bottom : 5px;
+  padding-left   : 15px;
+  font-size      : 0.8em;
+}
+
+.item_panel {
+  padding    : 5px 15px 5px 15px;
+  border-top : 1px solid #0e0f1a;
+  font-size  : 0.8em;
+}
+
+.label {
+  color     : #afafb3;
+  font-size : 1em;
+}
+
+.input-holder {
+  display    : inline-block;
+  width      : 65%;
+  height     : 47px;
+  padding    : 0px;
+  background : #6956EC;
+  background : -moz-linear-gradient(left, #6956EC, #56B2BA);
+  background : -o-linear-gradient(left, #6956EC, #56B2BA);
+  background : -webkit-linear-gradient(left, #6956EC, #56B2BA);
+  background : linear-gradient(left, #6956EC, #56B2BA);
+}
+
+.page_holder > form > .input-holder > input {
+  width            : 100%;
+  height           : 45px;
+  padding          : 25px 20px 20px 20px;
+  color            : white;
+  border           : 0px;
+  background-color : #161823;
+  font-size        : 0.6em;
+}
+
+.page_holder > form > label {
+  display    : inline-block;
+  width      : 33%;
+  color      : #afafb3;
+  text-align : left;
+  font-size  : 0.8em;
+}
+
+.page_holder > form > h3 {
+  margin-top  : 60px;
+  color       : #afafb3;
+  text-align  : center;
+  font-size   : 1.1em;
+  font-weight : 300;
+}
+
+.form-button {
+  width         : 100%;
+  height        : 45px;
+  margin-top    : 10px;
+  color         : white;
+  border-right  : 0px;
+  border-bottom : 0px;
+  border-left   : 0px;
+  border-radius : 3px;
+}
+
+#blue-button {
+  margin-top       : 50px;
+  margin-bottom    : 20px;
+  border-top       : 1px solid #3391ed;
+  background-color : #0b78e3;
+}
+
+#red-button {
+  margin-bottom    : 20px;
+  border-top       : 1px solid #f75486;
+  background-color : #ff2366;
+}
+
+/* INDEX LIST */
+
+#profile-icon {
+  position : relative;
+  width    : 50px;
+  height   : 50px;
+  float    : right;
+}
+
+#profile-icon > img {
+  position : absolute;
+  top      : 10px;
+  right    : 10px;
+  width    : 25px;
+  float    : left;
+  opacity  : 0.3;
+}
+
+.welcome_user {
+  width      : 100%;
+  height     : 30%;
+  padding    : 50px 30px 30px 30px;
+  text-align : center;
+}
+
+#button_center {
+  display : inline-block;
+  width   : 280px;
+  margin  : 0 auto;
+}
+
+.index-btn {
+  width : 130px;
+}
+
+#pink-btn {
+  background : -moz-linear-gradient(bottom right, #ba2855, #ff2366);
+  background : -o-linear-gradient(bottom right, #ba2855, #ff2366);
+  background : -webkit-linear-gradient(left top, #ba2855, #ff2366);
+  background : linear-gradient(bottom right, #ba2855, #ff2366);
+}
+
+.index-btn:hover {
+  opacity : 0.7;
+}
+
+.ride_list {
+  width    : 100%;
+  height   : 100%;
+  padding  : 0px;
+  overflow : scroll;
+}
+
+.ride_holder {
+  box-sizing       : border-box;
+  margin-top       : 10px;
+  margin-right     : 10px;
+  margin-bottom    : 10px;
+  margin-left      : 10px;
+  color            : white;
+  overflow         : auto;
+  border-radius    : 5px;
+  background-color : #1c1e2b;
+}
+
+.ride_holder > a {
+  color           : white;
+  text-decoration : none;
+}
+
+.ride_holder > a > p {
+  margin-bottom  : 8px;
+  padding-top    : 0px;
+  padding-bottom : 5px;
+  padding-left   : 15px;
+  font-size      : 0.8em;
+}
+
+.ride_info {
+  border-top : 1px solid #0e0f1a;
+  font-size  : 0.8em;
+}
+
+.origin_holder {
+  width          : 30%;
+  float          : left;
+  padding-top    : 15px;
+  padding-bottom : 20px;
+  text-align     : center;
+}
+
+.origin_holder > p {
+  margin : 0px;
+  color  : #afafb3;
+}
+
+.transfer_icon_holder {
+  width          : 5%;
+  float          : left;
+  margin-top     : 25px;
+  padding-top    : 15px;
+  padding-bottom : 20px;
+  padding-left   : 5px;
+}
+
+.transfer_icon_holder > img {
+  height : 30px;
+}
+
+.destination_holder {
+  width          : 30%;
+  float          : left;
+  padding-top    : 15px;
+  padding-bottom : 20px;
+  text-align     : center;
+}
+
+.destination_holder > p {
+  margin : 0px;
+  color  : #afafb3;
+}
+
+.remaining_info {
+  width          : 35%;
+  float          : left;
+  padding-top    : 5px;
+  padding-left   : 10px;
+  color          : white;
+  font-size      : 0.9em;
+  font-weight    : 600;
+  letter-spacing : 1px;
+}
+
+.extra_info_bold {
+  color       : #afafb3;
+  font-size   : 0.9em;
+  font-weight : 400;
+}
+
+#origin_span {
+  color       : #e92c81;
+  font-size   : 2.5em;
+  font-weight : 300;
+}
+
+#destination_span {
+  color       : #56b3bb;
+  font-size   : 2.5em;
+  font-weight : 300;
+}
+
+/* PROFILE */
+
+.driver_circles {
+  width         : 30%;
+  height        : 100px;
+  float         : left;
+  margin        : 2% 1.5% 4% 1.5%;
+  padding       : 10px;
+  border        : 5px solid #ff2366;
+  border-radius : 100%;
+  text-align    : center;
+}
+
+#blue_circle {
+  border : 5px solid #55b2ba;
+}
+
+#orange_circle {
+  border : 5px solid #fbd115;
+}
+
+.driver_circles > p {
+  font-size : 1.1em;
+}
+
+.driver_info_left {
+  width : 50%;
+  float : left;
+}
+
+.driver_info_right {
+  width       : 50%;
+  float       : left;
+  padding-top : 50px;
+}
+
+.driver_info_right > img {
+  width         : 100%;
+  padding-right : 20px;
+}
+
+/* CREATE RIDE */
+
+.panel-ride {
+  width            : 100%;
+  height           : 62%;
+  padding          : 25px;
+  background-color : #0e0f1a;
+}
+
+.ride-input {
+  width            : 100%;
+  height           : 45px;
+  float            : left;
+  padding          : 25px 20px 20px 20px;
+  color            : white;
+  border           : 0px;
+  background-color : #161823;
+  font-size        : 0.6em;
+}
+
+.ride-input-holder {
+  width      : 100%;
+  height     : 47px;
+  padding    : 0px;
+  background : #6956EC;
+  background : -moz-linear-gradient(left, #6956EC, #56B2BA);
+  background : -o-linear-gradient(left, #6956EC, #56B2BA);
+  background : -webkit-linear-gradient(left, #6956EC, #56B2BA);
+  background : linear-gradient(left, #6956EC, #56B2BA);
+}
+
+.ride-input-holder > img {
+  width : 20px;
+  float : left;
+}
+
+.panel-ride > form > button {
+  width            : 100%;
+  height           : 45px;
+  margin-top       : 25px;
+  color            : white;
+  border-top       : 1px solid #3391ed;
+  border-right     : 0px;
+  border-bottom    : 0px;
+  border-left      : 0px;
+  border-radius    : 3px;
+  background-color : #0b78e3;
+}
+
+#map {
+  width            : 100%;
+  height           : 30%;
+  background-color : red;
+}
+
+.page_holder > #map {
+  z-index  : 1;
+  position : relative;
+  width    : 100%;
+  height   : 100%;
+}
+
+.map_overlay {
+  z-index    : 10;
+  position   : absolute;
+  top        : 0px;
+  left       : 0px;
+  width      : 100%;
+  height     : 100%;
+  background : -moz-linear-gradient(top,  rgba(22,24,34,1) 0%, rgba(22,24,34,0) 30%, rgba(22,24,34,0) 100%);
+  background : -webkit-linear-gradient(top,  rgba(22,24,34,1) 0%,rgba(22,24,34,0) 30%,rgba(22,24,34,0) 100%);
+  background : linear-gradient(to bottom,  rgba(22,24,34,1) 0%,rgba(22,24,34,0) 30%,rgba(22,24,34,0) 100%);
+  filter     : progid:DXImageTransform.Microsoft.gradient( startColorstr='#161822', endColorstr='#00161822',GradientType=0 );
+}
+
+/* SIGNUP */
+
+.signup_radio {
+  width         : 20px;
+  height        : 20px;
+  margin-bottom : 5px;
+  color         : #161823;
+  border        : 5px solid white;
+}
+
+.driver_radio {
+  padding : 0px 25px 0px 10px;
+  color   : white;
+}
+
+/* VIEW & EDIT RIDES */
+
+#ride_info {
+  position         : absolute;
+  bottom           : 0px;
+  left             : 0px;
+  width            : 100%;
+  margin           : 350px 0px 0px 0px;
+  margin-top       : 350px;
+  padding-top      : 10px;
+  border-radius    : 0px;
+  background-color : #1d1f2d;
+}
+
+.rideview {
+  display   : inline-block;
+  padding   : 10px 20px 10px 20px;
+  font-size : 0.8em;
+}
+
+#rideview_colleft {
+  width      : 43%;
+  text-align : right;
+}
+
+#rideview_colmid {
+  width      : 10%;
+  text-align : center;
+}
+
+#rideview_colmid > img {
+  width  : 8px;
+  margin : 0 auto;
+}
+
+#rideview_colright {
+  width : 43%;
+}
+
+.dots {
+  width        : 10px;
+  margin-right : 15px;
+}
+
+.additional_info {
+  width      : 100%;
+  text-align : center;
+  font-size  : 0.8em;
+}
+
+.additional_info > p {
+  color : #d2d2d2;
+}
+
+.additional_info > p > span {
+  padding : 0px 10px 0px 10px;
+}
+
+#view_ride_holder {
+  padding : 0px;
+}

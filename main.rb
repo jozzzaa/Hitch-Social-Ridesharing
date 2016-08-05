@@ -3,7 +3,7 @@ require 'sinatra/reloader'
 require 'pg'
 require 'pry'
 require 'omniauth'
-# require 'bcrypt'
+require 'bcrypt'
 
 require_relative 'db_config'
 require_relative 'models/ride'
@@ -176,4 +176,27 @@ end
 get '/driver_dashboard' do
   @user_profile = User.find_by(id: session[:user_id])
   erb :user_driver_dashboard
+end
+
+get '/ride/:id/edit' do
+  @ride = Ride.find_by(id: params[:id])
+  @ride_requester = User.find_by(id: @ride['creator_id'])
+  erb :ride_edit
+end
+
+put '/ride/:id/edit' do
+  ride_edit = Ride.find_by(id: params[:id])
+  ride_edit.origin = params[:origin]
+  ride_edit.destination = params[:destination]
+  ride_edit.when_date = params[:when]
+  ride_edit.when_time = params[:time]
+  ride_edit.price_ask = params[:price]
+  ride_edit.save
+  redirect to "/ride/#{ params[:id] }"
+end
+
+delete '/ride/:id/edit' do
+  ride_delete = Ride.find_by(id: params[:id])
+  ride_delete.destroy
+  redirect to '/'
 end

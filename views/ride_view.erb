@@ -5,8 +5,7 @@
   </button>
 
   <% if current_user.id == @ride['creator_id'].to_i %>
-    <form action="/login" method="post">
-      <input type="hidden" name="_method" value="delete">
+    <form action="/ride/<%= @ride['id'] %>/edit" method="get">
       <button class="nav-btns" id="logout_button">
         <img src="/images/icons/settings.png" alt="">
       </button>
@@ -15,19 +14,39 @@
 
 </div>
 
-<div class="page_holder">
+<div class="page_holder" id="view_ride_holder">
 
   <div id="map">
 
   </div>
 
   <div class="map_overlay">
+
     <h3>Hitch a Ride with</h3>
     <h1><%= @ride_requester['first_name'] %></h1>
+
+    <div class="item_holder" id="ride_info">
+      <div class="rideview" id="rideview_colleft">
+        <img src="/images/icons/origin_icon.png" alt="" class="dots">
+        <%= @ride['origin'] %>
+      </div>
+      <div class="rideview" id="rideview_colmid">
+        <img src="/images/icons/travel-arrow-white.png" alt="">
+      </div>
+      <div class="rideview" id="rideview_colright">
+        <img src="/images/icons/destination_icon.png" alt="" class="dots">
+        <%= @ride['destination'] %>
+      </div>
+      <div class="additional_info">
+        <p>
+          <%= @ride['when_date'] %><span class="text_divier">|</span><%= @ride['when_time'] %><span class="text_divier">|</span><%= @ride['price_ask'] %>
+        </p>
+      </div>
+    </div>
+
   </div>
 
 </div>
-
 
 <script src="/javascripts/maps_route.js"></script>
 <script src="/javascripts/nav-buttons.js"></script>

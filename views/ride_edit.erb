@@ -1,0 +1,57 @@
+<div class="navigation">
+
+  <button class="nav-btns" id="back-button-nav">
+    <img src="/images/back-icon.png" alt="">
+  </button>
+
+</div>
+
+<div class="page_holder">
+
+  <h3>Edit</h3>
+  <h1>Your Ride</h1>
+
+  <form action="/ride/<%= @ride['id'] %>/edit" method="post">
+
+    <input type="hidden" name="_method" value="put">
+
+
+    <label for="origin">Starting Point</label>
+    <div class="input-holder">
+      <input type="text" name="origin" value="<%= @ride['origin'] %>">
+    </div>
+
+    <label for="destination">Destination</label>
+    <div class="input-holder">
+      <input type="text" name="destination" value="<%= @ride['destination'] %>">
+    </div>
+
+    <label for="when">Date</label>
+    <div class="input-holder">
+      <input type="text" name="when" value="<%= @ride['when_date'] %>">
+    </div>
+
+    <label for="time">Time</label>
+    <div class="input-holder">
+      <input type="text" name="time" value="<%= @ride['when_time'] %>">
+    </div>
+
+    <label for="price">Price</label>
+    <div class="input-holder">
+      <input type="number" name="price" value="<%= @ride['price_ask'] %>">
+    </div>
+
+    <button class="form-button" id="blue-button">Save</button>
+
+  </form>
+
+  <form action="/ride/<%= @ride['id'] %>/edit" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <button class="form-button" id="red-button">Delete</button>
+  </form>
+
+  </div>
+
+</div>
+
+<script src="/javascripts/nav-buttons.js"></script>

@@ -36,17 +36,17 @@ video#bgvid {
 }
 
 #overlay {
-position: absolute;
-display: flex;
-align-items: center;
-justify-content: center;
-top: 0px;
-left: 0px;
-z-index: 1;
-width: 100%;
-background-color: rgba(0, 0, 0, 0.3);
-height: 100%;
-width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
 }
 
 #login_welcome {
@@ -58,7 +58,6 @@ width: 100%;
 #login_welcome > div {
   background-color: rgba(0, 0, 0, 0.2);
   padding: 15px 25px 25px 25px;
-
 }
 
 #login_welcome > form > input {
@@ -101,11 +100,6 @@ width: 100%;
   color: #8D4DE8;
   border-radius: 3px;
   background-color: white;
-  /*background: -webkit-linear-gradient(left top, #8D4DE8, #FF2366);
-  background: -o-linear-gradient(bottom right, #8D4DE8, #FF2366);
-  background: -moz-linear-gradient(bottom right, #8D4DE8, #FF2366);
-  background: linear-gradient(bottom right, #8D4DE8, #FF2366);*/
-  margin-top: 10px;
 }
 
 #welcome_extra {
@@ -124,7 +118,6 @@ width: 100%;
   color: white;
   border: 1px solid white;
 }
-
 
 .navigation {
   height: 8%;
@@ -169,7 +162,26 @@ width: 100%;
   opacity: 0.3;
 }
 
+
 /*GLOBAL STYLES*/
+
+a[href^="http://maps.google.com/maps"] {
+  display : none !important;
+}
+
+a[href^="https://maps.google.com/maps"] {
+  display : none !important;
+}
+
+.gm-style-cc,
+.gmnoprint a,
+.gmnoprint span {
+  display : none;
+}
+
+.gmnoprint div {
+  background : none !important;
+}
 
 h1 {
   color: white;
@@ -241,8 +253,6 @@ p {
 .label {
   color: #afafb3;
   font-size: 1em;
-  /*display: inline-block;*/
-  /*width: 120px;*/
 }
 
 .input-holder {
@@ -305,8 +315,8 @@ p {
   background-color: #ff2366;
   border-top: 1px solid #f75486;
   margin-bottom: 20px;
-
 }
+
 
 /*INDEX LIST*/
 
@@ -325,7 +335,6 @@ p {
   float: left;
   opacity: 0.3;
 }
-
 
 .welcome_user {
   width: 100%;
@@ -346,7 +355,6 @@ p {
   height: 40px;
   float: left;
   margin: 0px 5px 0px 5px;
-  /*background-color: #56b3bb;*/
   background: -webkit-linear-gradient(left top, #6956EC, #8d80eb);
   background: -o-linear-gradient(bottom right, #6956EC, #8d80eb);
   background: -moz-linear-gradient(bottom right, #6956EC, #8d80eb);
@@ -360,7 +368,6 @@ p {
 }
 
 #pink-btn {
-  /*background-color: #e92c81 !important;*/
   background: -webkit-linear-gradient(left top, #ba2855, #ff2366);
   background: -o-linear-gradient(bottom right, #ba2855, #ff2366);
   background: -moz-linear-gradient(bottom right, #ba2855, #ff2366);
@@ -375,7 +382,6 @@ p {
   width: 100%;
   height: 100%;
   overflow: scroll;
-  /*background-color: blue;*/
   padding: 0px;
 }
 
@@ -384,9 +390,6 @@ p {
   background-color: #1c1e2b;
   color: white;
   border-radius: 5px;
-  /*padding-top: 2px;
-  padding-left: 15px;
-  padding-bottom: 2px;*/
   margin-top: 10px;
   margin-bottom: 10px;
   overflow: auto;
@@ -405,7 +408,6 @@ p {
   padding-left: 15px;
   padding-bottom: 5px;
   margin-bottom: 8px;
-
 }
 
 .ride_info {
@@ -450,7 +452,6 @@ p {
 .destination_holder > p {
   margin: 0px;
   color: #afafb3;
-
 }
 
 .remaining_info {
@@ -462,14 +463,12 @@ p {
   padding-top: 5px;
   padding-left: 10px;
   font-size: 0.9em;
-
 }
 
 .extra_info_bold {
   font-weight: 400;
   font-size: 0.9em;
   color: #afafb3;
-
 }
 
 #origin_span {
@@ -482,9 +481,8 @@ p {
   font-size: 2.5em;
   font-weight: 300;
   color: #56b3bb;
-
-
 }
+
 
 /*PROFILE*/
 
@@ -511,12 +509,9 @@ p {
   font-size: 1.1em;
 }
 
-
-
 .driver_info_left {
   float: left;
   width: 50%;
-
 }
 
 .driver_info_right {
@@ -529,8 +524,6 @@ p {
   width: 100%;
   padding-right: 20px;
 }
-
-
 
 
 /*CREATE RIDE*/
@@ -567,7 +560,6 @@ p {
 .ride-input-holder > img {
   width: 20px;
   float: left;
-
 }
 
 .panel-ride > form > button {
@@ -609,20 +601,81 @@ p {
   z-index: 10;
 }
 
-/*SIGNUP*/
 
-
+/* SIGNUP */
 
 .signup_radio {
   width: 20px;
   height: 20px;
-  border: 5px solid white;
-  color: #161823;
   margin-bottom: 5px;
-
+  color: #161823;
+  border: 5px solid white;
 }
 
 .driver_radio {
-  color: white;
   padding: 0px 25px 0px 10px;
+  color: white;
+}
+
+
+/* VIEW & EDIT RIDES */
+
+#ride_info {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  margin: 350px 0px 0px 0px;
+  margin-top: 350px;
+  padding-top: 10px;
+  border-radius: 0px;
+  background-color: #1d1f2d;
+}
+
+.rideview {
+  display: inline-block;
+  padding: 10px 20px 10px 20px;
+  font-size: 0.8em;
+}
+
+#rideview_colleft {
+  width      : 43%;
+  text-align : right;
+}
+
+#rideview_colmid {
+  width      : 10%;
+  text-align : center;
+}
+
+#rideview_colmid > img {
+  width  : 8px;
+  margin : 0 auto;
+}
+
+#rideview_colright {
+  width : 43%;
+}
+
+.dots {
+  width        : 10px;
+  margin-right : 15px;
+}
+
+.additional_info {
+  width      : 100%;
+  text-align : center;
+  font-size  : 0.8em;
+}
+
+.additional_info > p {
+  color : #d2d2d2;
+}
+
+.additional_info > p > span {
+  padding : 0px 10px 0px 10px;
+}
+
+#view_ride_holder {
+  padding : 0px;
 }
