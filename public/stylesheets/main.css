@@ -578,7 +578,7 @@ p {
 #map {
   height: 30%;
   width: 100%;
-  background-color: red;
+  background-color: #0e0f1a;
 }
 
 .page_holder > #map {
